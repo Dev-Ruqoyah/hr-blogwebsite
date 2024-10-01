@@ -1,15 +1,18 @@
 import { React } from 'react'
-import Navbar from './Component/Navbar'
+import AppRoutes from './Routes/AppRoutes'
 
 function App() {
  
 
   return (
     <>
-      <Navbar/>
+    
+    <AppRoutes/>
       
     </>
   )
+
+  // https://github.com/Dev-Ruqoyah
 }
 
 export default App

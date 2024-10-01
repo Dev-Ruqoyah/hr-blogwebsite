@@ -1,0 +1,11 @@
+{
+    "blogs":[
+        {
+            "id": 1,
+            "blog-topic": "Migrating to linear 101",
+            "blog-content": "Linear helps streamlining software Projects,sprints,tasks,and bugs tracking.Here's how to get started",
+            "blog-author": "Jonathan Wills",
+            "blog-time": "18 Jan 2022"
+        }
+    ]
+}
