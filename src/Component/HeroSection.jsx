@@ -2,9 +2,10 @@ import React from "react";
 const HeroSection = () => {
     return ( 
         <>
-            <div className="container mx-auto rounded-lg h-screen  bg-slate-50">
+            <div className=" rounded-lg h-screen  bg-slate-50">
+                <div className="container h-full mx-auto">
                 <div className="h-full">
-                    <div className="flex flex-col gap-4 justify-center items-start h-full border pt-20">
+                    <div className="flex flex-col gap-4 justify-center items-start h-full  pt-20">
                         <div className="content">
                             <p className="font-semibold">Featured</p>
                         </div>
@@ -17,6 +18,8 @@ const HeroSection = () => {
                         </div>
                     </div>
                 </div>
+                </div>
+                
             </div>
         </>
      );

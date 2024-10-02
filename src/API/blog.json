@@ -1,11 +1,24 @@
 {
+
     "blogs":[
         {
             "id": 1,
-            "blog-topic": "Migrating to linear 101",
-            "blog-content": "Linear helps streamlining software Projects,sprints,tasks,and bugs tracking.Here's how to get started",
-            "blog-author": "Jonathan Wills",
-            "blog-time": "18 Jan 2022"
+            "blogtopic": "Migrating to linear 101",
+            "blogcontent": "Linear helps streamlining software projects,sprints,tasks,and bugs tracking.Here's how to get started",
+            "blogauthor": "Jonathan Wills",
+            "blogtime": "18 Jan 2022",
+            "blogimage": "https://img.freepik.com/free-photo/programming-background-collage_23-2149901771.jpg?t=st=1727859194~exp=1727862794~hmac=819a4fdf96270297a833bb540e2803de3fd2605e67dc8668c79f20eb89b62d68&w=740",
+            "authorimage": "https://img.freepik.com/free-vector/professional-tiktok-profile-picture_742173-5866.jpg?t=st=1727859354~exp=1727862954~hmac=b2c5c069ea06794feec6bb453676bb9345b6195b6a1e71d4a32593e27a916c64&w=740"
+        },
+        {
+            "id": 2,
+            "blogtopic": "Coding for the world",
+            "blogcontent": "Linear helps streamlining software projects,sprints,tasks,and bugs tracking.Here's how to get started",
+            "blogauthor": "Jonathan Wills",
+            "blogtime": "18 Jan 2022",
+            "blogimage": "https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010127.jpg?t=st=1727860696~exp=1727864296~hmac=156549a222c9ec1bd6c618e74bfb6246e50491f4eed163142ca78f83d5819d3a&w=740",
+            "authorimage":"https://img.freepik.com/free-vector/profile-picture-template-design_742173-22027.jpg?t=st=1727862369~exp=1727865969~hmac=a4e8ed2f6d5b16780486e2adf1bd9ec54609d3dbe9068232d353f13e55cf2aaf&w=740"
+
         }
     ]
 }
