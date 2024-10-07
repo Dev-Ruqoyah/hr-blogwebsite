@@ -1,5 +1,7 @@
 import React from "react";
 import { FaBars } from "react-icons/fa6";
+import {Link} from "react-router-dom";
+
 
 // import Link
 // import 
@@ -31,7 +33,7 @@ const Navbar = () => {
                         {
                             links.map((link,index) =>(
                                 
-                                    <a className="font-semibold text-md" key={index} href={link.url}>{link.label}</a>
+                                    <Link className="font-semibold text-md" key={index} to={link.url}>{link.label}</Link>
                                 
                                 
                             ))

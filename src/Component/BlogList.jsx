@@ -5,7 +5,7 @@ const BlogList = ({ blogs, title }) => {
   return (
     <>
       <div className="contai py-10">
-        <h4 className="md:text-3xl text-2xl font-semibold ">{title}</h4>
+        <h4 className="md:text-3xl text-2xl px-12 font-semibold ">{title}</h4>
 
         <div className="container shadow-sm grid md:grid-cols-3 gap-10 mx-auto">
           {blogs.map(
