@@ -8,8 +8,8 @@ const Blog = () => {
    
     return ( 
         <>
-            {Error && <div>{Error}</div>}
-            {isLoading && <div>Loading</div>}
+            {Error && <div className="container mx-auto">{Error}</div>}
+            {isLoading && <div className="container mx-auto">Loading</div>}
            {blogs &&  <BlogList blogs={blogs} title={"Recent Blog Posts"}/>}
 
         </>

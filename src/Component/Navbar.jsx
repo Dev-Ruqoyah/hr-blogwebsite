@@ -41,9 +41,12 @@ const Navbar = () => {
                     </div>
                     <div className="btns md:flex hidden gap-3">
                         {
-                            buttons.map(({bag,label,hover,hovert,border,text},index) =>(
+                            buttons.map(({bag,label,hover,hovert,border,text,url},index) =>(
                                 // <button key={index} className={`text-white py-2 px-4 rounded-md ${bg}}`></button>
-                                <button key={index} className={`px-3 py-2 rounded-md border font-bold ${bag} ${hover} ${border} ${hovert} ${text}`}>{label}</button>
+                                <Link to={url} key={index}>
+                                <button  className={`px-3 py-2 rounded-md border font-bold ${bag} ${hover} ${border} ${hovert} ${text}`}>{label}</button>
+
+                                </Link>
                             
                             ))
                         }

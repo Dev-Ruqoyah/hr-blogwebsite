@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Navbar from '../Component/Navbar';
 const Signup = () => {
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
@@ -36,7 +36,10 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
+    <>
+        <Navbar/>
+        <div className="flex items-center justify-center h-screen bg-gray-100">
+    
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-96">
         <h2 className="text-2xl font-bold mb-6 text-center">Sign Up</h2>
         <input
@@ -79,6 +82,8 @@ const Signup = () => {
         </button>
       </form>
     </div>
+    </>
+    
   );
 };
 
