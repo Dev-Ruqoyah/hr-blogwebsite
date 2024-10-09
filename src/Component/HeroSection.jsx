@@ -2,7 +2,9 @@ import React from "react";
 const HeroSection = () => {
     return ( 
         <>
-            <div className=" rounded-lg h-screen  bg-slate-50">
+            <div  className=" rounded-lg h-[92vh]  bg-hero-image bg-cover text-white ">
+            <div className="bg-black opacity-40 absolute inset-0"></div>
+
                 <div className="container h-full mx-auto">
                 <div className="h-full">
                     <div className="flex flex-col gap-4 justify-center items-start h-full  pt-20">

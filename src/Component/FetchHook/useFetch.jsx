@@ -3,7 +3,7 @@ import { useState,useEffect } from "react";
 const useFetch = (url) =>{
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
-    const [Error, setError] = useState(null);
+    const [error, setError] = useState(null);
     useEffect(() =>{
         
         
@@ -23,14 +23,11 @@ const useFetch = (url) =>{
         })
     
     .catch(err =>{
-        console.error(err);
-        if(err.name === "AbortError"){
-            console.log("fetch");
-            
-        }else{
+        console.log(err);
+            // console.log("fetch");
             setError(err.message)
             setIsLoading(false)
-        }
+        
            
 
     })
@@ -38,7 +35,7 @@ const useFetch = (url) =>{
   
 },[url])
 
-    return{data,isLoading,Error}
+    return{data,isLoading,error}
    
 
 }

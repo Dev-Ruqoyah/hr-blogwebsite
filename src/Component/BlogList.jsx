@@ -24,7 +24,7 @@ const BlogList = ({ blogs, title }) => {
             ) => (
               <div key={id}>
                  <Link to={`blogs/${id}`}>
-                <div className=" rounded-lg p-5 ">
+                <div className=" rounded-lg shadow-md p-5 ">
                   <div className="blog-image py-5">
                     <img
                       src={blogimage}
