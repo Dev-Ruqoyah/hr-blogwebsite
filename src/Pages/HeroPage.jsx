@@ -8,7 +8,7 @@ const HeroPage = () => {
     return ( 
         <>
             <div className="">
-                <Navbar/>
+                <Navbar />
                 <HeroSection/>
                 <Blog/>
                 <LoadingMore/>
