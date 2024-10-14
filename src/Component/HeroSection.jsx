@@ -1,10 +1,17 @@
 import React from "react";
+import hero from '../assets/images/hero.jpg'
 const HeroSection = () => {
-    
+        const bgStyle = {
+            background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${hero})`,
+            backgroundPosition: 'center',
+            backgroundRepeat:  'no-repeat',
+            backgroundSize: 'cover'
+
+        }
     return ( 
         <>
-            <div  className=" rounded-lg h-[92vh]  bg-hero-image bg-cover text-white ">
-            <div className="bg-black opacity-50 absolute inset-0"></div>
+            <div  className={`rounded-lg h-[92vh]  bg-cover bg-no-repeat text-white`} style={bgStyle}>
+            {/* <div className="bg-black opacity-50 absolute inset-0"></div> */}
 
                 <div className="container h-full mx-auto">
                 <div className="h-full">
