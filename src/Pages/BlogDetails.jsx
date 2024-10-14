@@ -15,7 +15,7 @@ const BlogDetails = () => {
         {isLoading && <div>Loading...</div>}
         {error && <div> {error}</div>}
         {blog && (
-          <div className="grid grid-cols-3 h-screen container">
+          <div className="grid md:grid-cols-3 h-screen container">
             <div className="flex-none col-span-2  ">
               <div className="py-6 flex flex-col gap-3">
                 <p className="text-2xl font-semibold text-center w-4/5">

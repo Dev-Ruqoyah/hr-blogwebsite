@@ -1,9 +1,10 @@
 import React from "react";
 const HeroSection = () => {
+    
     return ( 
         <>
             <div  className=" rounded-lg h-[92vh]  bg-hero-image bg-cover text-white ">
-            <div className="bg-black opacity-10 absolute inset-0"></div>
+            <div className="bg-black opacity-50 absolute inset-0"></div>
 
                 <div className="container h-full mx-auto">
                 <div className="h-full">

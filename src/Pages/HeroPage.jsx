@@ -11,7 +11,7 @@ const HeroPage = () => {
                 <Navbar />
                 <HeroSection/>
                 <Blog/>
-                <LoadingMore/>
+                
                 <Footer/>
             </div>
         </>
