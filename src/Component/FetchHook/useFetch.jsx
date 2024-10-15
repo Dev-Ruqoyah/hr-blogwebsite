@@ -1,43 +1,43 @@
-import { useState,useEffect } from "react";
-// const abortConst = new AbortController
-const useFetch = (url) =>{
+import { useState, useEffect } from "react";
+
+const useFetch = (url) => {
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
-    useEffect(() =>{
-        
-        
-        fetch(url)
-        .then(res =>{
-            
-            if(!res.ok){
-                throw Error("Can't fetch data from the url")
-            }return res.json();
-        })
-        .then(data =>{
-            // console.log(data);
-            setData(data);
-            setIsLoading(false)
-            setError(null)
-            
-        })
-    
-    .catch(err =>{
-        console.log(err);
-            // console.log("fetch");
-            setError(err.message)
-            setIsLoading(false)
-        
-           
+    const abortController = new AbortController();
 
-    })
-    // return () => abortConst.abort();
-  
-},[url])
+    useEffect(() => {
+        const fetchData = async () => {
+            setIsLoading(true);
+            setError(null);
 
-    return{data,isLoading,error}
-   
+            try {
+                const res = await fetch(url, { signal: abortController.signal });
+                if (!res.ok) {
+                    throw new Error("Can't fetch data from the URL");
+                }
+                const jsonData = await res.json();
+                setData(jsonData);
+            } catch (err) {
+                if (err.name === "AbortError") {
+                    console.log("Fetch aborted");
+                } else {
+                    setError(err.message);
+                }
+            } finally {
+                setIsLoading(false);
+            }
+        };
 
-}
+        fetchData();
+
+        // Cleanup function to abort fetch on component unmount
+        return () => {
+            abortController.abort();
+        };
+    }, [url]);
+
+    return { data, isLoading, error };
+};
 
 export default useFetch;

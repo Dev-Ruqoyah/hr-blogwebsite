@@ -1,22 +1,24 @@
 import { useParams } from "react-router-dom";
-import useFetch from "../Component/FetchHook/useFetch";
 import Navbar from "../Component/Navbar";
+import Data from '../API/blog.json';
+
 const BlogDetails = () => {
   const { id } = useParams();
-  const {
-    data: blog,
-    error,
-    isLoading,
-  } = useFetch("http://localhost:8000/blogs/" + id);
+  
+  // Convert id to a number to match the data type
+  const blogId = Number(id);
+  
+  // Find the specific blog post based on the id
+  const blog = Data.Blogs.find(blog => blog.id === blogId);
+
   return (
     <>
       <div className="container mx-auto h-full px-6">
         <Navbar />
-        {isLoading && <div>Loading...</div>}
-        {error && <div> {error}</div>}
-        {blog && (
+        {!blog && <div>Blog not found</div>} {/* Handle case where blog is not found */}
+        {blog ? (
           <div className="grid md:grid-cols-3 h-screen container">
-            <div className="flex-none col-span-2  ">
+            <div className="flex-none col-span-2">
               <div className="py-6 flex flex-col gap-3">
                 <p className="text-2xl font-semibold text-center w-4/5">
                   {blog.blogtopic}
@@ -37,14 +39,14 @@ const BlogDetails = () => {
                     alt=""
                   />
                 </div>
-                <div className="blog-contetn">
-                  <p className=" w-4/5">{blog.blogcontent}</p>
+                <div className="blog-content">
+                  <p className="w-4/5">{blog.blogcontent}</p>
                 </div>
               </div>
             </div>
-            <div className="shadow container mx-auto  h-fit my-8 p-5 ">
+            <div className="shadow container mx-auto h-fit my-8 p-5">
               <div className="header">
-                <h3 className="text-xl font-semibold  text-center ">
+                <h3 className="text-xl font-semibold text-center">
                   About me
                 </h3>
               </div>
@@ -56,13 +58,12 @@ const BlogDetails = () => {
                 />
                 <p className="text-xl">{blog.blogauthor}</p>
                 <p className="text-center">{blog.authordetails}</p>
-                
               </div>
             </div>
           </div>
+        ) : (
+          <div>Loading...</div>
         )}
-        {/* <p>This is blog details - {id}</p>
-                <p>{blog}</p> */}
       </div>
     </>
   );

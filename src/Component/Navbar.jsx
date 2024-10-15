@@ -2,6 +2,7 @@
 
 import { Button, Navbar } from "flowbite-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,7 @@ const NavBar = () => {
       </div>
       <Navbar.Collapse className={isOpen ? 'block' : 'hidden'}>
         <Navbar.Link to="/" active>
-          Home
+          <Link to={"/"}>Home</Link>
         </Navbar.Link>
         
         <Navbar.Link href="#">Services</Navbar.Link>

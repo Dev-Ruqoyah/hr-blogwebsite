@@ -8,7 +8,7 @@ const Footer = () => {
   const legal = ["Overview","Features","Solution","Tutorial","Pricing","Releasing"]
   return (
     <>
-      <div className="container mx-auto">
+      <div className="container mx-auto my-10">
         <div className="bg-black container mx-auto rounded-lg text-white">
           <div className="container mx-auto py-5">
             <div className="header flex md:flex-col flex-wrap items-center justify-center gap-3">
