@@ -1,11 +1,11 @@
 import React from "react";
 const Footer = () => {
   const products = ["Overview","Features","Solution","Tutorial","Pricing","Releasing"]
-  const companys = ["Overview","Features","Solution","Tutorial","Pricing","Releasing"]
-  const resources = ["Overview","Features","Solution","Tutorial","Pricing","Releasing"]
-  const usecases = ["Overview","Features","Solution","Tutorial","Pricing","Releasing"]
-  const socials = ["Overview","Features","Solution","Tutorial","Pricing","Releasing"]
-  const legal = ["Overview","Features","Solution","Tutorial","Pricing","Releasing"]
+  const companys = ["About Us","Careers","Press","News","Media","Contact"]
+  const resources = ["Blog","Newsletter","Events","Help center","Tutorial","Support"]
+  const usecases = ["Startup","Enterprises","Solution","Government","Saas center","Market Place"]
+  const socials = ["Twitter","LinkedIn","Instagram","Facebook","Github","Dribble"]
+  const legal = ["Terms","Privacy","Cookies","Licenses","Settings","Contact"]
   return (
     <>
       <div className="container mx-auto my-10">

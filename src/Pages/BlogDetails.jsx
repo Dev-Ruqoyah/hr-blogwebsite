@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import Navbar from "../Component/Navbar";
 import Data from '../API/blog.json';
+import Footer from "../Component/Footer"
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -61,9 +62,11 @@ const BlogDetails = () => {
               </div>
             </div>
           </div>
+          
         ) : (
           <div>Loading...</div>
         )}
+        <Footer className=""/>
       </div>
     </>
   );
