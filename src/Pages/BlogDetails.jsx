@@ -66,7 +66,7 @@ const BlogDetails = () => {
         ) : (
           <div>Loading...</div>
         )}
-        <Footer className=""/>
+        {/* <Footer className=""/> */}
       </div>
     </>
   );
