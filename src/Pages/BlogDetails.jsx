@@ -18,7 +18,7 @@ const BlogDetails = () => {
         <Navbar />
         {!blog && <div>Blog not found</div>} {/* Handle case where blog is not found */}
         {blog ? (
-          <div className="grid md:grid-cols-3 h-screen container">
+          <div className="grid md:grid-cols-3 grid-cols-1 h-screen container">
             <div className="flex-none col-span-2">
               <div className="py-6 flex flex-col gap-3">
                 <p className="text-2xl font-semibold text-center w-4/5">
