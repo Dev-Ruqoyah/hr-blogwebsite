@@ -41,7 +41,7 @@ const BlogDetails = () => {
                   />
                 </div>
                 <div className="blog-content">
-                  <p className="w-4/5">{blog.blogcontent}</p>
+                  <p className="md:w-4/5">{blog.blogcontent}</p>
                 </div>
               </div>
             </div>
