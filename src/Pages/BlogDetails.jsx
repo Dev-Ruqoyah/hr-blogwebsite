@@ -45,7 +45,7 @@ const BlogDetails = () => {
                 </div>
               </div>
             </div>
-            <div className="shadow container mx-auto h-fit my-8 p-5">
+            <div className="shadow container mx-auto sm:w-full h-fit my-8 p-5">
               <div className="header">
                 <h3 className="text-xl font-semibold text-center">
                   About me
